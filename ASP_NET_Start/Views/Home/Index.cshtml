@@ -1,0 +1,42 @@
+﻿@using ASP_NET_Start.Models
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!--<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <ul>
+        <li>@Model.Name</li>
+        <li>@Model.Lastname</li>
+        <li>@Model.Fullname</li>
+    </ul>
+</div>
+
+<a asp-action="ShowUser" asp-controller="Home" class="btn btn-info">Get user info</a>-->
+
+<form asp-action="Edit" asp-controller="Home" method="post">
+    <input type="text" name="Name" value="@Model.Name" />
+
+    <input type="text" name="Lastname" value="@Model.Lastname" />
+
+    <button type="submit" class="btn btn-succes">Save</button>
+</form>
+
+<ul>
+    <li>@Model.Name</li>
+    <li>@Model.Lastname</li>
+</ul>
+
+<!--<ul>
+    <li>
+        @Model.Name
+    </li>
+
+    <li>
+        @Model.Lastname
+    </li>
+        <button asp-action="Edit" asp-controller="Home">Change</button>
+    <li>
+    </li>
+</ul>-->
